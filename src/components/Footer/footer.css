@@ -1,0 +1,40 @@
+.footer {
+ display: flex;
+ flex-direction: column;
+ padding: 20px 200px;
+ 
+}
+
+.fLists {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.fList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fListItem {
+  color: #003580;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+   .footer{
+    display: flex;
+    padding: 20px;
+   }
+}
+
+@media screen and (max-width: 768px) {
+  .footer{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+   }
+}
+

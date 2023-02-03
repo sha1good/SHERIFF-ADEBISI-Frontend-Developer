@@ -1,0 +1,153 @@
+.navbar {
+  height: 50px;
+  background-color: #003580;
+  color: white;
+  padding: 0 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+input {
+  outline: none;
+  width: 400px;
+  background-color: transparent;
+  color: whitesmoke;
+  border: none;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: white;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 5px;
+}
+
+.listItem {
+  display: flex;
+  list-style: none;
+}
+.user {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navImages {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+button {
+  font-weight: 500;
+  border: 2px solid white;
+  padding: 5px;
+  color: white;
+  background-color: #5271ff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.logout {
+  font-weight: 500;
+  border: none;
+  padding: 5px 10px;
+  background-color: #212d66;
+  color: white;
+  cursor: pointer;
+  height: 30px;
+  border-radius: 3px;
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 0 20px;
+  }
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .search {
+    display: none;
+  }
+  .listItem {
+    display: none;
+  }
+  .user {
+   padding:  0 50px;
+   }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 0 10px;
+  }
+
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    
+  }
+  .right{
+    margin-right: 10px;
+  }
+  .search {
+    display: none;
+  }
+  .listItem {
+    display: none;
+  }
+
+  .user {
+   gap: 20px;
+  }
+}
+
+@media screen  and (max-width: 1024px){
+  .navbar{
+    padding: 0 70px;
+  }
+  .search {
+    display: none;
+  }
+  .listItem{
+    display: none;
+  }
+  .user{
+    margin-right: 70px;
+  }
+}

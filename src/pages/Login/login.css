@@ -1,0 +1,103 @@
+.login{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        rgba(81, 100, 207, 0.5),
+          rgba(77, 110, 218, 0.5)
+      ),
+      url("https://images.unsplash.com/photo-1636828982375-a4ec8b809e5e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80")
+      center;
+      background-size: cover;
+}
+
+.loginContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lgTitle{
+    text-align: center;
+    color: white;
+    
+}
+.lgInput{
+    height: 30px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    color: blue;
+}
+
+.inputButton{
+    padding: 10px 20px;
+    font-weight: 500;
+    background-color: blue;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.inputButton:disabled{
+   cursor: not-allowed;
+   color: red;
+   background-color: #0071c28c;
+}
+
+
+.lgError{
+    color: red;
+    font-weight: bolder;
+    
+}
+
+.span__already{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+    .login {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 50px;
+    }
+  
+    .lgTitle{
+      align-self: center;
+    }
+  
+    .loginContainer {
+      width: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .lgInput {
+      width: 80%;
+      align-self: center;
+    }
+  
+    .inputButton {
+      align-self: center;
+      text-align: center;
+    }
+  
+    .span__already {
+      font-size: 14px;
+      align-self: center;
+    }
+  
+    .rgError {
+      align-self: center;
+    }
+  }
