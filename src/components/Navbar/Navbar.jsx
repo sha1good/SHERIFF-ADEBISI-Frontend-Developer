@@ -30,13 +30,13 @@ const Navbar = () => {
       <div className="right">
         <ul className="list">
           <li className="listItem">
-            <Link href="/">ABOUT</Link>
+            <Link to="/">ABOUT</Link>
           </li>
           <li className="listItem">
-            <Link href="/">DESIGN</Link>
+            <Link to="/">DESIGN</Link>
           </li>
           <li className="listItem">
-            <Link href="/contact">CONTACT</Link>
+            <Link to="/">CONTACT</Link>
           </li>
           <div className="user">
             <span>{currentUser?.username?.toUpperCase()}</span>

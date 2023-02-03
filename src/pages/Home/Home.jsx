@@ -1,6 +1,8 @@
 import Banner from "../../components/Banner/Banner";
 import CapsuleList from "../../components/CapsuleList/CapsuleList";
 import SearchItem from "../../components/SearchItem/SearchItem";
+import MailList  from "../../components/MailList/MailList"
+import Footer from "../../components/Footer/Footer";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -9,6 +11,7 @@ import {
   fetchFailure,
 } from "../../redux/capsuleSlice";
 import axios from "axios";
+import Navbar from "../../components/Navbar/Navbar";
 
 const Home = () => {
   const [capsules, setCapsules] = useState([]);
@@ -56,6 +59,7 @@ const Home = () => {
 
   return (
     <>
+    <Navbar/>
       <Banner />
       <SearchItem
         onHandleSearch={onHandleClick}
@@ -68,6 +72,8 @@ const Home = () => {
         error={error}
         postPerPage={postPerPage}
       />
+      <MailList />
+      <Footer />
     </>
   );
 };
