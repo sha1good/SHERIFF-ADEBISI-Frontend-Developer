@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# This application was built with React,Redux and Hooks.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
