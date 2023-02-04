@@ -32,6 +32,7 @@ const Register = () => {
   } = useAuthForm((value) => value.trim() !== "");
 
   const [error, setError] = useState(null);
+  const [loading,  setLoading] = useState(false);
   const navigate = useNavigate();
 
   let formIsValid = false;
@@ -46,6 +47,7 @@ const Register = () => {
     if (!formIsValid) {
       return;
     }
+    setLoading(true);
 
     try {
       const response = await publicRequest.post(`/auth/signup`, {
@@ -53,12 +55,13 @@ const Register = () => {
         email: enteredEmail,
         password: enteredPassword,
       });
-
+      setLoading(false)
       response.status === 200 && navigate("/login");
       resetUsernameForm();
       resetEmailForm();
       resetPasswordForm();
     } catch (error) {
+      setLoading(false)
       setError(error);
     }
   };
@@ -121,14 +124,17 @@ const Register = () => {
         {passwordHasError && (
           <p className="error-text">Please enter a valid Password</p>
         )}
+        {!loading && (
         <button
           onClick={handleClick}
-          className="inputButton"
+          className="inputRgButton"
           disabled={!formIsValid}
         >
           Register
         </button>
-        {error && (
+       )}
+       {loading && <p className="rgLoading">Sending Request ....</p>}
+        {!loading && error && (
           <span className="rgError">{error.response?.data.message}</span>
         )}
         <span className="span__already">

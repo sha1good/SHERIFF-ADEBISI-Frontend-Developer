@@ -42,13 +42,6 @@
     cursor: pointer;
 }
 
-.inputButton:disabled{
-   cursor: not-allowed;
-   color: red;
-   background-color: #0071c28c;
-}
-
-
 .lgError{
     color: red;
     font-weight: bolder;
