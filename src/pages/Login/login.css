@@ -53,6 +53,10 @@
     cursor: pointer;
 }
 
+.lgLoading{
+  color: rgba(212, 11, 11, 0.938);
+}
+
 @media screen and (max-width: 480px) {
     .login {
       height: 100vh;

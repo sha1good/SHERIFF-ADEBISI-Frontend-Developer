@@ -8,12 +8,12 @@ import { useDispatch, useSelector } from "react-redux"
 const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const  { loading, error } = useSelector((state) => state.user)
+  const  {loading, error } = useSelector((state) => state.user)
   const [credentials, setCredentails] = useState({
     username: "",
     password: "",
   });
-
+  
 
  const handleChnage = (event) => {
     setCredentails((prev) => ({
@@ -58,13 +58,13 @@ return (
           value={credentials.password}
         />
         <button
-          disabled={loading}
           onClick={handleClick}
           className="inputButton"
         >
           Login
         </button>
-        {error && <span className="lgError">{error.response?.data.message}</span>}
+        {loading && <p className="lgLoading">Sending Request ....</p>}
+        {!loading && error && <span className="lgError">{error.response?.data.message}</span>}
         <span className="span__already">Don't have an Account? <Link to="/register">Register</Link></span>
       </div>
      
