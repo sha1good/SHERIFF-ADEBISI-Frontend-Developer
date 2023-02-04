@@ -24,11 +24,11 @@
     
 }
 .lgInput{
-    height: 30px;
-    padding: 10px;
-    background-color: white;
-    border-radius: 5px;
-    color: blue;
+  height: 30px;
+  padding: 10px;
+  background-color: rgb(135, 135, 184);
+  border-radius: 5px;
+  color: white;
 }
 
 .inputButton{
